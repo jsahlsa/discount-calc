@@ -71,7 +71,7 @@ export default function App() {
         </label>
         <input type="submit" value="calculate" />
       </form>
-      <p className="percent-discount">Percent discount: {percent * 100}%</p>
+      <p className="percent-discount">Percent discount: {Math.floor((1 - percent) * 100)}%</p>
       <div className="price-wrapper">
         <div className="pickup-prices">
           <h3>Pickup / Drop off prices:</h3>

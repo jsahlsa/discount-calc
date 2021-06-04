@@ -29666,7 +29666,7 @@ function App() {
     value: "calculate"
   })), /*#__PURE__*/_react.default.createElement("p", {
     className: "percent-discount"
-  }, "Percent discount: ", percent * 100, "%"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Percent discount: ", Math.floor((1 - percent) * 100), "%"), /*#__PURE__*/_react.default.createElement("div", {
     className: "price-wrapper"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "pickup-prices"
