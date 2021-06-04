@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.price-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: mediumaquamarine;
+  border: 10px darkblue solid;
+}
+
+
+/*# sourceMappingURL=/src.9ad09f98.css.map */
