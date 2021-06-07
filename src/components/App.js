@@ -25,13 +25,13 @@ const delivery = {
   forty: 40,
   fifty: 50,
   sixty: 50,
-  oneFifty: 70, 
+  oneFifty: 70,
   pallet: 150
 };
 
 export default function App() {
   const [avg, setAvg] = useState(0);
-  const [percent, setPercent] = useState(0.65);
+  const [percent, setPercent] = useState(0.7);
 
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -44,22 +44,21 @@ export default function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (avg > 25) {
-      setPercent(0.45);
-    } else if (avg > 20) {
+    if (avg > 40) {
       setPercent(0.5);
-    } else if (avg > 15) {
-      setPercent(0.55);
-    } else if (avg > 10) {
+    } else if (avg > 20) {
       setPercent(0.6);
     } else {
-      setPercent(0.65);
+      setPercent(0.7);
     }
   }
 
   return (
     <div className="App">
       <h2>Rates based on average quantity</h2>
+      <h5>Less than 20 packages per days gets a 30% discount</h5>
+      <h5>21 - 40 packages per day gets a 40% discount</h5>
+      <h5>More than 40 packages per day receives a 50% discount</h5>
       <form onSubmit={handleSubmit}>
         <label for="avg-packages">
           Enter average packages per day

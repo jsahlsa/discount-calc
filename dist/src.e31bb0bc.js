@@ -29621,7 +29621,7 @@ function App() {
       avg = _useState2[0],
       setAvg = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(0.65),
+  var _useState3 = (0, _react.useState)(0.7),
       _useState4 = _slicedToArray(_useState3, 2),
       percent = _useState4[0],
       setPercent = _useState4[1];
@@ -29638,22 +29638,18 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (avg > 25) {
-      setPercent(0.45);
-    } else if (avg > 20) {
+    if (avg > 40) {
       setPercent(0.5);
-    } else if (avg > 15) {
-      setPercent(0.55);
-    } else if (avg > 10) {
+    } else if (avg > 20) {
       setPercent(0.6);
     } else {
-      setPercent(0.65);
+      setPercent(0.7);
     }
   }
 
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "Rates based on average quantity"), /*#__PURE__*/_react.default.createElement("form", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Rates based on average quantity"), /*#__PURE__*/_react.default.createElement("h5", null, "Less than 20 packages per days gets a 30% discount"), /*#__PURE__*/_react.default.createElement("h5", null, "21 - 40 packages per day gets a 40% discount"), /*#__PURE__*/_react.default.createElement("h5", null, "More than 40 packages per day receives a 50% discount"), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/_react.default.createElement("label", {
     for: "avg-packages"
@@ -29758,7 +29754,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39123" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36225" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
