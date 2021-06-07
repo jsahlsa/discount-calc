@@ -29600,7 +29600,8 @@ var pickup = {
   forty: 25,
   fifty: 25,
   sixty: 35,
-  oneFifty: 35
+  oneFifty: 35,
+  pallet: 150
 };
 var delivery = {
   env: 5,
@@ -29610,7 +29611,8 @@ var delivery = {
   forty: 40,
   fifty: 50,
   sixty: 50,
-  oneFifty: 70
+  oneFifty: 70,
+  pallet: 150
 };
 
 function App() {
@@ -29686,7 +29688,9 @@ function App() {
     className: "ten"
   }, "50lbs - 60lbs: ", formatter.format(percent * pickup.sixty)), /*#__PURE__*/_react.default.createElement("p", {
     className: "ten"
-  }, "60+ lbs: ", formatter.format(percent * pickup.oneFifty))), /*#__PURE__*/_react.default.createElement("div", {
+  }, "60+ lbs: ", formatter.format(percent * pickup.oneFifty)), /*#__PURE__*/_react.default.createElement("p", {
+    className: "ten"
+  }, "Pallet: ", formatter.format(percent * pickup.pallet))), /*#__PURE__*/_react.default.createElement("div", {
     className: "delivery-prices"
   }, /*#__PURE__*/_react.default.createElement("h3", null, "Pickup / Drop off prices:"), /*#__PURE__*/_react.default.createElement("p", {
     className: "env"
@@ -29704,7 +29708,9 @@ function App() {
     className: "ten"
   }, "50lbs - 60lbs: ", formatter.format(percent * delivery.sixty)), /*#__PURE__*/_react.default.createElement("p", {
     className: "ten"
-  }, "60+ lbs: ", formatter.format(percent * delivery.oneFifty)))));
+  }, "60+ lbs: ", formatter.format(percent * delivery.oneFifty)), /*#__PURE__*/_react.default.createElement("p", {
+    className: "ten"
+  }, "Pallet: ", formatter.format(percent * delivery.pallet)))));
 }
 },{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";

@@ -13,7 +13,8 @@ const pickup = {
   forty: 25,
   fifty: 25,
   sixty: 35,
-  oneFifty: 35
+  oneFifty: 35,
+  pallet: 150
 };
 
 const delivery = {
@@ -24,7 +25,8 @@ const delivery = {
   forty: 40,
   fifty: 50,
   sixty: 50,
-  oneFifty: 70
+  oneFifty: 70, 
+  pallet: 150
 };
 
 export default function App() {
@@ -99,6 +101,9 @@ export default function App() {
           <p className="ten">
             60+ lbs: {formatter.format(percent * pickup.oneFifty)}
           </p>
+          <p className="ten">
+            Pallet: {formatter.format(percent * pickup.pallet)}
+          </p>
         </div>
         <div className="delivery-prices">
           <h3>Pickup / Drop off prices:</h3>
@@ -125,6 +130,9 @@ export default function App() {
           </p>
           <p className="ten">
             60+ lbs: {formatter.format(percent * delivery.oneFifty)}
+          </p>
+          <p className="ten">
+            Pallet: {formatter.format(percent * delivery.pallet)}
           </p>
         </div>
       </div>
