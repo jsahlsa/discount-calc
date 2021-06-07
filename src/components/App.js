@@ -29,7 +29,7 @@ const delivery = {
 
 export default function App() {
   const [avg, setAvg] = useState(0);
-  const [percent, setPercent] = useState(0.7);
+  const [percent, setPercent] = useState(0.65);
 
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -42,16 +42,16 @@ export default function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (avg > 50) {
-      setPercent(0.2);
-    } else if (avg > 30) {
-      setPercent(0.3);
+    if (avg > 25) {
+      setPercent(0.45);
     } else if (avg > 20) {
-      setPercent(0.4);
-    } else if (avg > 10) {
       setPercent(0.5);
+    } else if (avg > 15) {
+      setPercent(0.55);
+    } else if (avg > 10) {
+      setPercent(0.6);
     } else {
-      setPercent(0.7);
+      setPercent(0.65);
     }
   }
 
@@ -71,7 +71,7 @@ export default function App() {
         </label>
         <input type="submit" value="calculate" />
       </form>
-      <p className="percent-discount">Percent discount: {Math.floor((1 - percent) * 100)}%</p>
+      <p className="percent-discount">Percent discount: <strong>{Math.round((1 - percent) * 100)}%</strong></p>
       <div className="price-wrapper">
         <div className="pickup-prices">
           <h3>Pickup / Drop off prices:</h3>

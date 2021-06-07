@@ -1,19 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,700&display=swap');
 
+body {
+  background: floralwhite;
+}
+
 .App {
   font-family: sans-serif;
-  text-align: center;
   display: grid;
   justify-items: center;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 .price-wrapper {
+  text-align: center;
+  width: 90%;
   display: grid;
-  width: 80%;
-  grid-template-columns: repeat(2, 1fr);
-  background: mediumaquamarine;
-  border: 10px darkblue solid;
+  justify-content: center;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+ 
+}
+
+.pickup-prices, .delivery-prices {
+  
+  border: #639 dashed 10px;
+  border-radius: 20px;
 }
 
 input {

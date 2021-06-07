@@ -29619,7 +29619,7 @@ function App() {
       avg = _useState2[0],
       setAvg = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(0.7),
+  var _useState3 = (0, _react.useState)(0.65),
       _useState4 = _slicedToArray(_useState3, 2),
       percent = _useState4[0],
       setPercent = _useState4[1];
@@ -29636,16 +29636,16 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (avg > 50) {
-      setPercent(0.2);
-    } else if (avg > 30) {
-      setPercent(0.3);
+    if (avg > 25) {
+      setPercent(0.45);
     } else if (avg > 20) {
-      setPercent(0.4);
-    } else if (avg > 10) {
       setPercent(0.5);
+    } else if (avg > 15) {
+      setPercent(0.55);
+    } else if (avg > 10) {
+      setPercent(0.6);
     } else {
-      setPercent(0.7);
+      setPercent(0.65);
     }
   }
 
@@ -29666,7 +29666,7 @@ function App() {
     value: "calculate"
   })), /*#__PURE__*/_react.default.createElement("p", {
     className: "percent-discount"
-  }, "Percent discount: ", Math.floor((1 - percent) * 100), "%"), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Percent discount: ", /*#__PURE__*/_react.default.createElement("strong", null, Math.round((1 - percent) * 100), "%")), /*#__PURE__*/_react.default.createElement("div", {
     className: "price-wrapper"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "pickup-prices"
@@ -29752,7 +29752,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46809" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39123" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
