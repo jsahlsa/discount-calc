@@ -34,18 +34,25 @@ input {
 input[type="submit"] {
   background: #639;
   color: white;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
   outline: none;
   border: none;
   text-transform: uppercase;
   padding: 0.5em 1em;
   border-radius: 5px;
   box-shadow: 1px 1px 2px hsla(50, 100%, 0%, 0.5);
-  transition: background 0.2s ease-in, transform 0.1s ease-out, box-shadow 0.2s ease-in-out;
-  transition: ;
+  transition: background 0.1s ease-in, transform 0.1s ease-out, box-shadow 0.2s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  
 }
 input[type="submit"]:hover {
-  background: hsla(270, 67%, 50%, 1);
-  box-shadow: -1px -1px 2px hsla(50, 100%, 0%, 0.5);
+  background: hsla(270, 67%, 40%, 1);
+  box-shadow: inset 1px 1px 2px hsla(50, 100%, 0%, 0.5);
+  
+  
+
 }
 input[type="submit"]:active {
  transform: translateY(3px);
