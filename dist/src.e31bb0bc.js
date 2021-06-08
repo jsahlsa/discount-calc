@@ -29649,7 +29649,7 @@ function App() {
 
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "Rates based on daily quantity"), /*#__PURE__*/_react.default.createElement("h5", null, "Less than 20 packages per day gets a 30% discount"), /*#__PURE__*/_react.default.createElement("h5", null, "21 - 40 packages per day gets a 40% discount"), /*#__PURE__*/_react.default.createElement("h5", null, "More than 40 packages per day receives a 50% discount"), /*#__PURE__*/_react.default.createElement("form", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Rates based on daily quantity"), /*#__PURE__*/_react.default.createElement("h5", null, "20 or less packages per day gets a 30% discount"), /*#__PURE__*/_react.default.createElement("h5", null, "21 - 40 packages per day gets a 40% discount"), /*#__PURE__*/_react.default.createElement("h5", null, "More than 40 packages per day receives a 50% discount"), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/_react.default.createElement("label", {
     for: "avg-packages"

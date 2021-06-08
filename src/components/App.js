@@ -56,7 +56,7 @@ export default function App() {
   return (
     <div className="App">
       <h2>Rates based on daily quantity</h2>
-      <h5>Less than 20 packages per day gets a 30% discount</h5>
+      <h5>20 or less packages per day gets a 30% discount</h5>
       <h5>21 - 40 packages per day gets a 40% discount</h5>
       <h5>More than 40 packages per day receives a 50% discount</h5>
       <form onSubmit={handleSubmit}>
